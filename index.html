@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,7 +41,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section data-transition="convex">
+				<section data-transition="slide">
 
 
 						<img src="polymer_logo.png" style="background:none; border:none; box-shadow:none;">
@@ -49,7 +49,7 @@
 
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						At Google I/O 2013, Google presented a new web user interface (UI) framework called Polymer.
 
@@ -58,7 +58,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						# Polymer.js
 
@@ -71,7 +71,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						## Built for Speed
 						Polymer 1.0 replaces the shadow DOM <a href="#/polyfill">polyfill</a> with a lightweight shim, uses a new, faster data-binding system, and significantly reduces code size.
@@ -83,7 +83,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						## On Polyfills
 						- Term coined by Remy Sharp
@@ -95,7 +95,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- Polyfills allow fixing issues with a browser's API or adding interfaces that haven't been implemented at all.
 
@@ -107,7 +107,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						<b>Trivia</b> : Polyfilla, a paste used to cover up cracks & holes in walls, was also a visualization that Sharp found fitting for the term.
 
@@ -115,7 +115,7 @@
 				</section>
 
 
-				<section id="polyfill" data-markdown data-transition="convex">
+				<section id="polyfill" data-markdown data-transition="slide">
 					<script type="text/template">
 						## Web Components
 
@@ -128,7 +128,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- What's truly amazing about these new elements is that they fully encapsulate all of their HTML and CSS.
 							- That means the styles that you write always render as you intended, and your HTML is safe from the prying eyes of external JavaScript.
@@ -139,7 +139,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						## Overview of Features
 
@@ -150,7 +150,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- What this library can do, is allow us to create reusable components that work as true DOM elements while helping to minimize our reliance on JavaScript to do complex DOM manipulation to render rich UI results.
 
@@ -164,7 +164,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- The result looks like this :
 
@@ -175,7 +175,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- ## Features of Polymer
 							- Registering a Custom Element
@@ -189,7 +189,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						## Register Custom Elements
 						- Polymer gives us the ability to create our own custom elements from scratch and even reuse other elements to extend our custom ones.
@@ -203,7 +203,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- From the polymer.js documentation we can take the following example :
 							- register an element
@@ -230,7 +230,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- The Polymer function registers the element with the browser and returns a basic Base constructor that can be used to create new instances of your element via code.
 
@@ -250,7 +250,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- Custom elements can also be registered using <b>document.registerElement():</b>
 
@@ -273,7 +273,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						## Extending Elements
 						- Custom elements allows you to extend existing (native) HTML elements as well as other custom elements.
@@ -294,7 +294,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						## Lifecycle Callbacks
 
@@ -309,7 +309,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						- Some of the short-named lifecycle callbacks are :
 							- `created` instead of `createdCallback`
@@ -323,189 +323,238 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- When Polymer finishes initializing the element's local Document Object Model, Polymer adds an extra callback called `ready`.
+
+						- Local DOM initialization and the `ready` callback occur one after the other.
+
+						- The ready callback is called when an element’s local DOM is ready.
+
+						-	It is called after the element’s template has been stamped and all elements inside the element’s local DOM have been configured and their ready method has been called.
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- The initialization order of an element is as follows :
+							- created callback
+							- local DOM initialized
+							- ready callback
+							- factoryImpl callback
+							- attached callback
+
+						- For a given element:
+							- The created callback is always called before ready.
+							- The ready callback is always called before attached.
+							- The ready callback is called on any local DOM children before it’s called on the host element.
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- Implement ready when it’s necessary to manipulate an element’s local DOM when the element is constructed.
+
+						```
+						ready: function()
+						{
+  						// access a local DOM element by ID using this.$
+  						this.$.header.textContent = 'Hello!';
+						}
+						```
+
+						- Within a given tree, ready is generally called in document order, but you should not rely on the ordering of initialization callbacks between sibling elements, or between a host element and its light DOM children.
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- the initialization order may vary depending on whether or not the browser includes native support for web components.
+
+						- In particular, there are no guarantees with regard to initialization timing between sibling elements or between parents and light DOM children.
+
+						- an element’s light DOM children may be initialized before or after the parent element, and an element’s siblings may become ready in any order.
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						## Some Basics about the Local DOM
+
+						- the DOM that an element is in charge of creating and managing is called its local DOM
+
+						- On browsers that support shadow DOM, shadow DOM may be used to create local DOM.
+							- On other supported browsers, Polymer provides local DOM via a custom implementation called shady DOM which requires you to use the Polymer DOM API when manipulating DOM from JavaScript.
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- Shadow DOM refers to the ability of the browser to include a subtree of DOM elements into the rendering of a document, but not into the main document DOM tree. Consider a simple slider:
+
+						```
+						<input id="foo" type="range">
+ 						```
+						- Any Webkit-enabled broswer should render the following code as
+
+						<center><input id="foo" type="range"></center>
+
+						- Try sliding the slider along the given range
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- There’s a separate movable element inside of the input element, but it isn't visible using JS
+
+						- Browser developers realized that coding the appearance and behavior of HTML elements completely by hand is hard and silly.
+
+						- They created a boundary between what you, the Web developer can reach and what’s considered implementation details, thus inaccessible to you.
+
+						- The browser however, can traipse across this boundary at will.
+							- With this boundary in place, they were able to build all HTML elements using the same good-old Web technologies, out of the divs and spans just like you would.
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 
 
 					</script>
 				</section>
 
-				<section data-markdown data-transition="convex">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="convex">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="convex">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="convex">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="convex">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="convex">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="convex">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="convex">
+				<section data-markdown data-transition="slide">
 					<script type="text/template">
 						References :
 						1. https://www.polymer-project.org/1.0/
@@ -513,6 +562,7 @@
 						3. https://css-tricks.com/modular-future-web-components/
 						4. http://code.tutsplus.com/tutorials/using-polymer-to-create-web-components--cms-20475
 						5. http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
+						6. http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/
 
 
 					</script>
@@ -535,7 +585,7 @@
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'slide', // none/fade/slide/slide/concave/slide
 
 				// Optional reveal.js plugins
 				dependencies: [
@@ -543,7 +593,7 @@
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/slide-js/slide.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
