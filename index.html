@@ -296,14 +296,29 @@
 
 				<section data-markdown data-transition="convex">
 					<script type="text/template">
+						## Lifecycle Callbacks
 
+						- Lifecycle callbacks are functions that are automatically called before or after certain actions developed on models.
+
+						- For example, we sometimes use lifecycle callbacks to automatically encrypting a password before creating or updating an `Account` model.
+
+						- Polymer’s Base prototype implements the standard Custom Element lifecycle callbacks to perform tasks necessary for Polymer’s built-in features.
+
+						- The hooks in turn call shorter-named lifecycle methods on your prototype.
 
 					</script>
 				</section>
 
 				<section data-markdown data-transition="convex">
 					<script type="text/template">
+						- Some of the short-named lifecycle callbacks are :
+							- `created` instead of `createdCallback`
+							- `attached` instead of `attachedCallback`
+							- `detached` instead of `detachedCallback`
+							- `attributeChanged` instead of `attributeChangedCallback`
 
+						- We can fallback to using the low-level methods instead of the short-named ones
+							- i.e., vanilla createdCallback functions can be implemented in your prototype
 
 					</script>
 				</section>
