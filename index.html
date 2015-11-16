@@ -391,9 +391,9 @@
 
 						- Polymer uses Shadow DOM styling rules for providing scoped styling of the element’s local DOM.
 
-						- Scoped styles should be provided via `style` tags placed inside the element’s local DOM `template`
-							- Prior to Polymer 1.1, the recommendation was to place `style` tags inside the `dom-module` for an element (but outside the `template`).
-							-  Still supported, but no longer recommended
+						- Scoped styles should be provided via `style` tags placed inside the element’s local DOM `template`.
+							- Prior to Polymer 1.1, the recommendation was to place `style` tags inside the `dom-module` for an element, but outside the `template`.
+							- The older methodology is still supported, but no longer recommended.
 
 					</script>
 				</section>
@@ -439,13 +439,13 @@
 					<script type="text/template">
 						## Sharing styles across Web Components with Polymer
 
-						- A big challenge is sharing common stylesheets across different elements in Polymer
+						- Sharing common stylesheets across different elements in Polymer still poses to be a big challenge.
 
-						- A web component comes with its own CSS, i.e a web component also has to come with possible shared styles
+						- A web component comes with its own CSS, i.e a web component also has to come with possible shared styles.
 
-						- 2 or more independent components that depend on the same stylesheet will lead to code duplication
+						- 2 or more independent components that depend on the same stylesheet will lead to code duplication.
 
-						- Code duplication possible but not recommended among developers
+						- Code duplication possible but not recommended among developers.
 
 					</script>
 				</section>
@@ -476,13 +476,13 @@
 
 				<section data-markdown data-transition="slide">
 					<script type="text/template">
-						- Once created, we can import and use it like so:
+						- Once created, it can be imported and used like so:
 
 								<link rel="import" href="path/to/my-button.html">
 
 								<my-button>Button</my-button>
 
-						- Now if we wish to create another button with the same stylesheet then we'll have to duplicate the code
+						- Now if we wish to create another button with the same stylesheet then we'll have to duplicate the code.
 
 						- ```<core-style>``` prevents that from happening
 
@@ -507,14 +507,14 @@
 							```
 						- That's it! Now all that is required is to wrap the shared styles in a <core-style> element.
 
-						- Giving this element an id (in our case button) makes that element a producer
+						- Giving this element an id (in our case button) makes that element a producer.
 
 					</script>
 				</section>
 
 				<section data-markdown data-transition="slide">
 					<script type="text/template">
-						- Once ```<core-style>``` producers defined somewhere in your app (either inlined or imported), we can use ```<core-style>``` consumers to reuse them in our components.
+						- Once ```<core-style>``` producers defined somewhere in your app, either inlined or imported, we can use ```<core-style>``` consumers to reuse them in our components.
 
 						- To consume styles, all we have to do is to use the ```<core-style>``` element in our component and give it a ref attribute to define the producer from which we want to get the styles.
 
