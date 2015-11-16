@@ -180,7 +180,7 @@
 						- ## Features of Polymer
 							- Registering a Custom Element
 							- Lifecycle
-							- Properties
+							- Styling
 							- Local Document Object Model
 							- Data Binding
 							- Events
@@ -387,6 +387,156 @@
 
 				<section data-markdown data-transition="slide">
 					<script type="text/template">
+						## Styling
+
+						- Polymer uses Shadow DOM styling rules for providing scoped styling of the element’s local DOM.
+
+						- Scoped styles should be provided via `style` tags placed inside the element’s local DOM `template`
+							- Prior to Polymer 1.1, the recommendation was to place `style` tags inside the `dom-module` for an element (but outside the `template`).
+							-  Still supported, but no longer recommended
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide" style="text-align: left;">
+					<script type="text/template">
+						- An example of styling within Polmer
+
+						```
+						<dom-module id="my-element">
+
+						  <template>
+
+						    <style>
+						      :host {
+						        display: block;
+						        border: 1px solid red;
+						      }
+						      #child-element {
+						        background: yellow;
+						      }
+						      /* styling elements distributed to content (via ::content) requires */
+						      /* selecting the parent of the <content> element for compatibility with */
+						      /* shady DOM . This can be :host or a wrapper element. */
+						      .content-wrapper > ::content .special {
+						        background: orange;
+						      }
+						    </style>
+
+						    <div id="child-element">In local DOM!</div>
+						    <div class="content-wrapper"><content></content></div>
+
+						  </template>
+
+							// write script tage and content here
+
+						</dom-module>
+						```
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						## Sharing styles across Web Components with Polymer
+
+						- A big challenge is sharing common stylesheets across different elements in Polymer
+
+						- A web component comes with its own CSS, i.e a web component also has to come with possible shared styles
+
+						- 2 or more independent components that depend on the same stylesheet will lead to code duplication
+
+						- Code duplication possible but not recommended among developers
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- ```<core-style>``` is one of Polymer's core elements that gives us the possibility to manage styling inside other elements and can be used to make themes.
+
+						- Due to its nature and API we can use it to share stylesheets across multiple web components, without duplicating code.
+
+						- Suppose a button template is created with the following code:
+
+						```
+						button {
+        display: inline-block;
+        background: #bada55;
+        border: 1px solid #6ba4b8;
+        border-radius: 0.3em;
+        font-size: 1.4em;
+        cursor: pointer;
+      }
+					```
+
+
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- Once created, we can import and use it like so:
+
+								<link rel="import" href="path/to/my-button.html">
+
+								<my-button>Button</my-button>
+
+						- Now if we wish to create another button with the same stylesheet then we'll have to duplicate the code
+
+						- ```<core-style>``` prevents that from happening
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- A ```<core-style>``` producer is created using
+
+							```html
+							<core-style id="button">
+	  button {
+	    display: inline-block;
+	    background: #bada55;
+	    border: 1px solid #6ba4b8;
+	    border-radius: 0.3em;
+	    font-size: 1.4em;
+	    cursor: pointer;
+	  }
+	</core-style>
+							```
+						- That's it! Now all that is reqd is to wrap the shared styles in a <core-style> element.
+
+						- Giving this element an id (in our case button) makes that element a producer
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
+						- Once ```<core-style>``` producers defined somewhere in your app (either inlined or imported), we can use ```<core-style>``` consumers to reuse them in our components.
+
+						- To consume styles, all we have to do is to use the ```<core-style>``` element in our component and give it a ref attribute to define the producer from which we want to get the styles.
+
+						- The style button can be
+
+										<polymer-element name="my-button">
+											<template>
+											<core-style ref="button"></core-style>
+											<button><content></content></button>
+											</template>
+										//start script
+											Polymer('my-button');
+										//end script
+										</polymer-element>
+
+						- there's no `style` element anymore. All needed styles are defined in our ```style``` producer so we can just reference them with ```<core-style>```.
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide">
+					<script type="text/template">
 						## Some Basics about the Local DOM
 
 
@@ -428,62 +578,7 @@
 						- They created a boundary between what web developer can reach and what’s considered implementation details, thus inaccessible to the user.
 							- The browser however, can traipse across this boundary at will.
 
-						- With this boundary in place, they were able to build all HTML elements using the same good-old Web technologies, out of the divs 
-					</script>
-				</section>
-
-				<section data-markdown data-transition="slide">
-					<script type="text/template">
-						## Styling
-
-						- Polymer uses Shadow DOM styling rules for providing scoped styling of the element’s local DOM.
-
-						- Scoped styles should be provided via `style` tags placed inside the element’s local DOM `template`
-							- Prior to Polymer 1.1, the recommendation was to place `style` tags inside the `dom-module` for an element (but outside the `template`).
-							-  Still supported, but no longer recommended
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="slide">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="slide">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="slide">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="slide">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="slide">
-					<script type="text/template">
-
-
-					</script>
-				</section>
-
-				<section data-markdown data-transition="slide">
-					<script type="text/template">
-
-
+						- With this boundary in place, they were able to build all HTML elements using the same good-old Web technologies, out of the divs
 					</script>
 				</section>
 
@@ -667,7 +762,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide">
+				<section data-markdown data-transition="slide" style="text-align: left;">
 					<script type="text/template">
 						Content pulled / referenced from :
 						1. https://www.polymer-project.org/1.0/
